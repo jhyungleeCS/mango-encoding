@@ -3,7 +3,7 @@ import sys
 #from re import A
 import string
 import base64
-
+##Test comment
 #Loop to Create Password
 while True:
     password_length = int(input('How many characters would you like your password to be?: '))
