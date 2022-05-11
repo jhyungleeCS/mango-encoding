@@ -1,2 +1,2 @@
-# mango-encryption
-First Project: Password Generator and Encryption in py
+# mango-encoding
+First Project: Password Generator and Encoding using base64
