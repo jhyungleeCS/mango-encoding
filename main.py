@@ -18,7 +18,7 @@ while True:
     print('Generated Password: ' + password)
     break
 
-encryption_pr = input('Do you want encryption on your password?(y/n): ')
+encryption_pr = input('Do you want an Encoded version of your password?(y/n): ')
 #Encryption Base64 Functions 
 def encrypt_base64():
     base64_string = password
@@ -49,14 +49,18 @@ while True:
             print( 
             "[1] Base64 \n"
             "[2] Base32 \n"
-            "Choose an Encryption from above (#): ")
+            "[3] Base16 \n"
+            "[4] Citrix CTX1 \n"
+            "[5] Octal \n"
+            "[6] Hex \n"
+            "Choose an Encoding Format from above (#): ")
             choice = input('')    
             if choice == "1":
                 encrypt_base64()
                 break
             
             else: 
-                print("Encrpytion Not Valid! \n")
+                print("Format Not Valid! \n")
                 print("============================")
                 print("\n")
                 break
