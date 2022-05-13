@@ -9,6 +9,10 @@ import base64
 while True:
     password_length = int(input('How many characters would you like your password to be?: '))
     password = ""
+#    while password_length == int:
+#        continue
+#    else:
+#        password_length = int(input("Valid Number Only!: \n")
 
     for var in range(0, password_length):
         pr = random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits)
@@ -16,7 +20,7 @@ while True:
     print('Generated Password: ' + password)
     break
 
-encryption_pr = input('Do you want an Encoded version of your password?(y/n): ')
+encoded_pr = input('Do you want an Encoded version of your password?(y/n): ')
 ###########################################################################   
 #Encoding Base64 Function
 def encode_base64():
@@ -44,14 +48,11 @@ def encode_base16():
 #Encoding Loop
 while True:
     for retry in range(3):
-        if encryption_pr == "Yes" or encryption_pr == "yes" or encryption_pr == "Y" or encryption_pr == "y":
+        if encoded_pr == "Yes" or encoded_pr == "yes" or encoded_pr == "Y" or encoded_pr == "y":
             print( 
             "[1] Base64 \n"
             "[2] Base32 \n"
             "[3] Base16 \n"
-            "[4] Citrix CTX1 \n"
-            "[5] Octal \n"
-            "[6] Hex \n"
             "Choose an Encoding Format from Above (#): ")
             choice = input('')    
             if choice == "1":
@@ -66,11 +67,11 @@ while True:
             else: 
                 print("!!! Format Not Valid !!! \n")
                 #print("Choose an Encoding Format from Below: \n")               
-        elif encryption_pr == "No" or encryption_pr == "no" or encryption_pr == "N" or encryption_pr == "n":
+        elif encoded_pr == "No" or encoded_pr == "no" or encoded_pr == "N" or encoded_pr == "n":
             print("Good-bye! \n" + "Remember your password: " + password)
             break
         else:
-            encryption_pr = (input("Yes or No Only: \n"))
+            encoded_pr = (input("Yes or No Only: \n"))
     else:
         print("Number of attempts exceeded...")
         sys.exit(1)
