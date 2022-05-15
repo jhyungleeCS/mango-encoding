@@ -5,16 +5,32 @@ import sys
 import string
 import base64
 
-#Loop to Create Password
-while True:
-    password_length = int(input('How many characters would you like your password to be?: '))
-    password = ""
+password_length = input("How many characters would you like your password to be?: ")
+password = ""
 
-    for var in range(0, password_length):
+while password_length.digit():
+    continue
+else: 
+    password_length = input("Number value only! : \n")
+for var in range(0, password_length):
         pr = random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits)
         password = password + pr   
-    print('Generated Password: ' + password)
-    break
+        print('Generated Password: ' + password)
+
+
+#Loop to Create Password
+#while True:
+#    password_length = int(input('How many characters would you like your password to be?: '))
+#    password = ""
+#    while password_length.digit() == "True":
+#        continue
+#    else:
+#        password_length = int(input("Valid Number Only! : \n"))
+#    for var in range(0, password_length):
+#        pr = random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits)
+#        password = password + pr   
+#    print('Generated Password: ' + password)
+#    break
 
 encryption_pr = input('Do you want an Encoded version of your password?(y/n): ')
 ###########################################################################   
