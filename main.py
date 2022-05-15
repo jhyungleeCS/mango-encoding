@@ -7,13 +7,21 @@ import base64
 
 #Loop to Create Password
 while True:
-    password_length = int(input('How many characters would you like your password to be?: '))
+    password_length = (input('How many characters would you like your password to be?: '))
     password = ""
-    for var in range(0, password_length):
+    if password_length.isdigit():
+        password_length = int(password_length)
+        pass
+    else: 
+        password_length = (input("Integer Number Only!: "))
+
+    for i in range(0, password_length):
         pr = random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits)
-        password = password + pr   
-    print('Generated Password: ' + password)
+        password = password + pr
+    print ('Generated Password: ' + password)
     break
+    
+
 
 encoded_pr = input('Do you want an Encoded version of your password?(y/n): ')
 ###########################################################################   
