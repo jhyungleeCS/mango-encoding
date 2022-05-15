@@ -10,17 +10,18 @@ while True:
     password_length = (input('How many characters would you like your password to be?: '))
     password = ""
     if password_length.isdigit():
+        password_length = int(password_length)
         pass
     else: 
         password_length = (input("Integer Number Only!: "))
-    
-    password_length = int(password_length)
 
-    for var in range(0, password_length):
-            pr = random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits)
-            password = password + pr   
-            print ('Generated Password: ' + password)
+    for i in range(0, password_length):
+        pr = random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits)
+        password = password + pr
+    print ('Generated Password: ' + password)
     break
+    
+
 
 encoded_pr = input('Do you want an Encoded version of your password?(y/n): ')
 ###########################################################################   
